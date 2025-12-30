@@ -1,5 +1,9 @@
 # Python Jour 2 - Les Boucles
 
+[![Tests](https://github.com/mugire-can/Python-Jour-2---Les-Boucles/actions/workflows/python-tests.yml/badge.svg)](https://github.com/mugire-can/Python-Jour-2---Les-Boucles/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+
 Training project for learning Python loops (`for` and `while` statements).
 
 ## Overview
@@ -51,17 +55,67 @@ python "projet jour 2.py"
 
 ## Requirements
 
-- Python 3.6+
-- No external dependencies
+- Python 3.8+
+- Dependencies listed in `requirements.txt`
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Testing
+
+Run the comprehensive test suite:
+
+```bash
+pytest test_projet.py -v
+```
+
+Run with coverage report:
+
+```bash
+pytest test_projet.py --cov=. --cov-report=html
+```
+
+**Test Results:**
+- Total Tests: 9
+- Status: All Passing ✓
+- Coverage: All exercises covered
+
+## CI/CD
+
+This project uses **GitHub Actions** for continuous integration and continuous deployment.
+
+**Automated Checks:**
+- ✅ Run tests on Python 3.8, 3.9, 3.10, 3.11
+- ✅ Code quality checks with flake8 and pylint
+- ✅ Python syntax validation
+- ✅ Code coverage reporting with Codecov
+
+**Workflow triggers:**
+- On every push to `main` or `Working` branches
+- On pull requests to `main` or `Working` branches
+
+View the workflow: [`.github/workflows/python-tests.yml`](.github/workflows/python-tests.yml)
+
+## License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ## Structure
 
 ```
 .
-├── projet jour 2.py          # Main exercise file with all 9 jobs
-├── .gitignore                # Git ignore patterns
-├── README.md                 # This file
-└── Python Jour 2 - Les Boucles.pdf  # Original course material
+├── projet jour 2.py                          # Main exercise file with all 9 jobs
+├── test_projet.py                            # Unit tests (9 comprehensive tests)
+├── requirements.txt                          # Project dependencies
+├── LICENSE                                   # MIT License
+├── README.md                                 # This file
+├── .gitignore                                # Git ignore patterns
+├── .github/
+│   └── workflows/
+│       └── python-tests.yml                  # GitHub Actions CI/CD configuration
+└── Python Jour 2 - Les Boucles.pdf          # Original course material
 ```
 
 ## Key Learning Outcomes
@@ -72,6 +126,9 @@ python "projet jour 2.py"
 - ✅ String formatting with f-strings
 - ✅ Conditional logic within loops (even/odd detection)
 - ✅ User input handling with `input()` and type conversion
+- ✅ Unit testing with pytest
+- ✅ Automated CI/CD with GitHub Actions
+- ✅ Professional project practices
 
 ## Notes
 
