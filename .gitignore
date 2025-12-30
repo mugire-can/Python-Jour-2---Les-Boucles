@@ -131,4 +131,6 @@ Thumbs.db
 
 # Project-specific
 .pytest_cache/
+htmlcov/
+.coverage
 *.pdf
